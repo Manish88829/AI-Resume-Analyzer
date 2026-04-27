@@ -20,12 +20,13 @@ An AI-powered Resume Analyzer built using Python and Flask that simulates ATS (A
 
 - **Frontend:** HTML, CSS
 - **Backend:** Python (Flask)
-- **Libraries:** NLP / Text Processing (if used)
 - **Version Control:** Git & GitHub
 
 ---
 
 ## 📂 Project Structure
+
+
 AI-Resume-Analyzer/
 │
 ├── templates/ # HTML files (index.html, result.html)
@@ -34,7 +35,38 @@ AI-Resume-Analyzer/
 ├── utils/ # Helper functions
 ├── app.py # Main Flask application
 ├── requirements.txt # Dependencies
-└── README.md # Project documentation 
+└── README.md # Project documentation
+
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Manish88829/AI-Resume-Analyzer.git
+cd AI-Resume-Analyzer
+2️⃣ Install dependencies
+pip install -r requirements.txt
+3️⃣ Run the application
+python app.py
+4️⃣ Open in browser
+http://127.0.0.1:5000/
+📸 Screenshots
+
+<img width="1867" height="841" alt="image" src="https://github.com/user-attachments/assets/5544149a-165a-44ff-a3f5-b7aead8f4250" />
+
+
+👨‍💻 Author
+
+Manish Kumar
+GitHub: https://github.com/Manish88829
+
+⭐ If you like this project, don't forget to star the repository!
+
+
+---
+
 
 
 
