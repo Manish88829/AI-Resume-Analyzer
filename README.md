@@ -55,6 +55,7 @@ http://127.0.0.1:5000/
 📸 Screenshots
 
 <img width="1867" height="841" alt="image" src="https://github.com/user-attachments/assets/5544149a-165a-44ff-a3f5-b7aead8f4250" />
+<img width="1893" height="838" alt="image" src="https://github.com/user-attachments/assets/40b799f1-7e8a-4fd7-a64e-a50092fed311" />
 
 
 👨‍💻 Author
