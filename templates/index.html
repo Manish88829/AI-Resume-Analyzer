@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Resume Analyzer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 20px 60px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* GLASS CARD */
+.upload-area {
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0,255,255,0.2);
+}
+
+/* BUTTON */
+.upload-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(45deg,#00f2fe,#4facfe);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#00f2fe,#4facfe);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* FILE TEXT */
+#file-name {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+}
+
+.feature-card {
+    width: 260px;
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* HOW IT WORKS */
+.steps {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.step-box {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+}
+
+/* RESULT SECTION */
+.results {
+    display: none;
+    padding: 60px;
+    text-align: center;
+}
+
+/* SCORE CIRCLE */
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#00f2fe 0% 75%, #444 75%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 28px;
+}
+
+/* AI SUGGESTIONS */
+.suggestions {
+    margin-top: 30px;
+}
+
+.suggestion {
+    background: rgba(255,255,255,0.08);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* LOADING */
+.loading {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">🚀 AI Resume Analyzer</header>
+
+<section class="hero">
+<div>
+<h1>Improve Your Resume with AI</h1>
+<p>Get ATS score, insights & suggestions instantly</p>
+
+<form class="upload-area" onsubmit="showResult(event)">
+<input type="file" id="fileInput" hidden required>
+<label for="fileInput" class="upload-btn">📂 Choose Resume</label>
+<span id="file-name">No file selected</span>
+<button type="submit">Analyze Resume 🚀</button>
+
+<div class="loading" id="loading">🔍 Analyzing Resume...</div>
+</form>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+<div class="feature-card">📊 ATS Score</div>
+<div class="feature-card">💡 Skill Analysis</div>
+<div class="feature-card">📝 AI Suggestions</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps">
+<h2>How It Works</h2>
+<div class="step-box">1️⃣ Upload Resume</div>
+<div class="step-box">2️⃣ AI Analysis</div>
+<div class="step-box">3️⃣ Get Results</div>
+</section>
+
+<!-- RESULTS -->
+<section class="results" id="results">
+<h2>Your ATS Score</h2>
+
+<div class="circle">75%</div>
+
+<div class="suggestions">
+<div class="suggestion">✔ Add more quantified achievements</div>
+<div class="suggestion">✔ Include keywords like Python, Flask</div>
+<div class="suggestion">✔ Improve summary section</div>
+</div>
+</section>
+
+<script>
+const fileInput = document.getElementById("fileInput");
+const fileName = document.getElementById("file-name");
+
+fileInput.addEventListener("change", function() {
+    fileName.textContent = this.files[0]?.name || "No file selected";
+});
+
+function showResult(e){
+    e.preventDefault();
+
+    document.getElementById("loading").style.display="block";
+
+    setTimeout(()=>{
+        document.getElementById("loading").style.display="none";
+        document.getElementById("results").style.display="block";
+        window.scrollTo(0, document.body.scrollHeight);
+    },2000);
+}
+</script>
+ 
+</div>
+
+</body>
+</html>
